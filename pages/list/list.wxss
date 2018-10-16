@@ -1,0 +1,10 @@
+/* pages/news/news.wxss */
+.news-list {
+  display: flex;
+  flex-direction: column;
+  padding: 40rpx;
+}
+.news-item {
+  margin: 10rpx;
+  height:50px;
+}

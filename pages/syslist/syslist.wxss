@@ -1,0 +1,22 @@
+/* pages/syslist/syslist.wxss */
+.itemInfo{
+   height: 35px;
+}
+
+.tips {
+  font-size: 28rpx;
+  text-align: center;
+  padding: 5rpx;
+  color: #ccc;
+}
+
+.tips image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+}
+
+.tips image,
+.tips text {
+  vertical-align: middle;
+}

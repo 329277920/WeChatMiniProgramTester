@@ -1,0 +1,14 @@
+<!--pages/news/news.wxml-->
+<view class="header" hidden="{{hideHeader}}">
+  <view>下拉刷新中……</view>   
+</view>
+<scroll-view class="container news-list" scroll-y="true" style="height:{{windowHeight}}px" bindscrolltolower="lower" bindscrolltoupper="upper" bindscroll="scroll">
+  <view wx:for="{{list}}" wx:for-item="info" wx:key="id" class="news-item">
+    <text>{{info.title}}</text>
+  </view>
+</scroll-view>
+<view>
+  <loading hidden="{{hidden}}" bindchange="loadingChange">
+    加载中...
+  </loading>
+</view>

@@ -1,0 +1,19 @@
+<!--pages/syslist/syslist.wxml-->
+<!-- 加载更多部分 -->
+<view class="tips" hidden="{{hiddleTop}}">
+    <view wx:if="{{true}}"><image src="/images/loading.gif" mode="aspectFill"/><text>加载中...</text></view>
+    <view wx:else><text>没有更多内容了</text></view>
+</view>
+
+<view>
+  <view wx:for="{{list}}" wx:for-item="info" wx:key="id" class="itemInfo">
+    <text>{{info.title}}</text>
+  </view>
+</view>
+
+
+<!-- 加载更多部分 -->
+<view class="tips" hidden="{{hiddleFoot}}">
+    <view wx:if="true"><image src="/images/loading.gif" mode="aspectFill"/><text>加载中...</text></view>
+    <view wx:else><text>没有更多内容了</text></view>
+</view>
