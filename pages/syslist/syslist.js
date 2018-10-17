@@ -91,6 +91,41 @@ Page({
   },
   stopFootLoading: function (that){
     that.setData({ hiddleFoot: true });
+  },
+  
+  // 在分享时触发
+  onShareAppMessage :function(res){
+    console.log("正在分享");
+    console.log("分享来源:" + res.from);   
+    var path = "/pages/index/index";
+    if (res.from == "menu") {
+      path: "/pages/index/index"
+    }
+    else{      
+      path = "/pages/syslist/syslist"
+    }
+    console.log("分享地址:" + path);   
+    return {
+      title:"两只兔子说段子",
+      path: path,
+      imageUrl:"/images/share.png",
+      success:function(){
+        console.log("分享成功");
+      },
+      fail:function(){
+        console.log("分享失败");
+      },
+      complete:function(){
+        console.log("结束分享");
+      }
+    }       
+  },
+
+  onShare:function(){
+    console.log("按钮分享");
+    wx.showShareMenu({
+
+    });
   }
 })
 

@@ -6,7 +6,7 @@
 .tips {
   font-size: 28rpx;
   text-align: center;
-  padding: 5rpx;
+  padding: 20rpx;
   color: #ccc;
 }
 
